@@ -1,8 +1,8 @@
 {
-  "nom": "Festival des Prés",
-  "dates": "2 — 4 juillet 2027",
-  "lieu": "Neuchâtel",
-  "logo": "/images/logo.svg",
+  "nom": "ParaBôle Festival",
+  "dates": "15-18 Juillet 2027",
+  "lieu": "Bôle",
+  "logo": "/images/PB_WH.png",
   "couleurs": {
     "fond": "#f4efe6",
     "texte": "#1d1d1b",
@@ -11,16 +11,13 @@
   },
   "accueil": {
     "banniere": "/images/banniere-accueil.jpg",
-    "flickr_cle_api": "",
-    "flickr_album": "",
     "intervalle": 5,
-    "video_youtube": "",
-    "video": "/videos/accueil.mp4"
+    "video": "/videos/aftermovie2026.mp4"
   },
   "programmation": {
     "titre": "Programmation",
     "banniere": "/images/banniere-programmation.jpg",
-    "intro": "Trois jours, deux scènes, et une programmation à découvrir ci-dessous. Cliquez sur un·e artiste pour en savoir plus."
+    "intro": "Stay tuned pour la grille horaire définitive <3"
   },
   "reseaux": {
     "instagram": "https://www.instagram.com/",
@@ -28,8 +25,14 @@
     "facebook": "https://www.facebook.com/"
   },
   "contacts": [
-    { "email": "info@festival-exemple.ch" },
-    { "email": "benevoles@festival-exemple.ch" },
-    { "email": "presse@festival-exemple.ch" }
+    {
+      "email": "info@parabole.ch"
+    },
+    {
+      "email": "prog@parabole.ch"
+    },
+    {
+      "email": "stand@parabole.ch"
+    }
   ]
 }
