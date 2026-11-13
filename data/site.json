@@ -11,6 +11,7 @@
   },
   "accueil": {
     "banniere": "/images/banniere-accueil.jpg",
+    "flickr_album": "https://www.flickr.com/photos/182118015@N02/albums/72177720334715643/",
     "intervalle": 5,
     "video": "/videos/accueil.mp4"
   },
