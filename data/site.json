@@ -1,0 +1,35 @@
+{
+  "nom": "Festival des Prés",
+  "dates": "2 — 4 juillet 2027",
+  "lieu": "Neuchâtel",
+  "logo": "/images/logo.svg",
+  "couleurs": {
+    "fond": "#f4efe6",
+    "texte": "#1d1d1b",
+    "accent": "#e4572e",
+    "banniere": "#1d1d1b"
+  },
+  "accueil": {
+    "banniere": "/images/banniere-accueil.jpg",
+    "flickr_cle_api": "",
+    "flickr_album": "",
+    "intervalle": 5,
+    "video_youtube": "",
+    "video": "/videos/accueil.mp4"
+  },
+  "programmation": {
+    "titre": "Programmation",
+    "banniere": "/images/banniere-programmation.jpg",
+    "intro": "Trois jours, deux scènes, et une programmation à découvrir ci-dessous. Cliquez sur un·e artiste pour en savoir plus."
+  },
+  "reseaux": {
+    "instagram": "https://www.instagram.com/",
+    "flickr": "https://www.flickr.com/",
+    "facebook": "https://www.facebook.com/"
+  },
+  "contacts": [
+    { "label": "Infos", "email": "info@festival-exemple.ch" },
+    { "label": "Bénévoles", "email": "benevoles@festival-exemple.ch" },
+    { "label": "Presse", "email": "presse@festival-exemple.ch" }
+  ]
+}
