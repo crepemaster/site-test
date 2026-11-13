@@ -103,7 +103,7 @@ function footer(site) {
     .join('')
   const mails = (site.contacts || [])
     .filter(c => c.email)
-    .map(c => `<li>${c.label ? esc(c.label) + ' : ' : ''}<a href="mailto:${esc(c.email)}">${esc(c.email)}</a></li>`)
+    .map(c => `<li><a href="mailto:${esc(c.email)}">${esc(c.email)}</a></li>`)
     .join('')
   $('footer').innerHTML = `<div class="reseaux">${icons}</div><ul class="contacts">${mails}</ul>`
 }

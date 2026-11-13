@@ -13,8 +13,15 @@ setup('programmation').then(async site => {
       <span class="info">${esc([a.jour, a.scene].filter(Boolean).join(' · '))}</span>
     </a>`).join('')
 
-  // arrows
+  // arrows, back to the other end when reaching the edge
   const step = () => track.clientWidth * 0.8
-  $('.prev').onclick = () => track.scrollBy({ left: -step(), behavior: 'smooth' })
-  $('.next').onclick = () => track.scrollBy({ left: step(), behavior: 'smooth' })
+  const end = () => track.scrollWidth - track.clientWidth - 5
+
+  $('.next').onclick = () => track.scrollLeft >= end()
+    ? track.scrollTo({ left: 0, behavior: 'smooth' })
+    : track.scrollBy({ left: step(), behavior: 'smooth' })
+
+  $('.prev').onclick = () => track.scrollLeft <= 5
+    ? track.scrollTo({ left: track.scrollWidth, behavior: 'smooth' })
+    : track.scrollBy({ left: -step(), behavior: 'smooth' })
 })

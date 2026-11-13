@@ -34,7 +34,8 @@ content:
       - name: logo
         label: Logo
         type: image
-        media: images
+        options:
+          media: images
 
       - name: couleurs
         label: Couleurs
@@ -50,7 +51,7 @@ content:
         label: Page d'accueil
         type: object
         fields:
-          - { name: banniere, label: Image de la bannière, type: image, media: images }
+          - { name: banniere, label: Image de la bannière, type: image, options: { media: images } }
           - name: flickr_cle_api
             label: Clé API Flickr
             type: string
@@ -64,14 +65,14 @@ content:
             label: Vidéo YouTube (si pas de Flickr)
             type: string
             description: Lien YouTube, prioritaire sur le fichier vidéo
-          - { name: video, label: Fichier vidéo (si pas de Flickr), type: file, media: videos }
+          - { name: video, label: Fichier vidéo (si pas de Flickr), type: file, options: { media: videos, categories: [video] } }
 
       - name: programmation
         label: Page programmation
         type: object
         fields:
           - { name: titre, label: Titre, type: string }
-          - { name: banniere, label: Image de la bannière, type: image, media: images }
+          - { name: banniere, label: Image de la bannière, type: image, options: { media: images } }
           - { name: intro, label: Texte d'introduction, type: text }
 
       - name: reseaux
@@ -87,7 +88,6 @@ content:
         type: object
         list: true
         fields:
-          - { name: label, label: Intitulé, type: string }
           - { name: email, label: E-mail, type: string }
 
   - name: artistes
