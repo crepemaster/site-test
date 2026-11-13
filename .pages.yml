@@ -1,0 +1,96 @@
+media:
+  - name: images
+    label: Images
+    input: images
+    output: /images
+    categories: [image]
+  - name: artistes
+    label: Photos artistes
+    input: images/artistes
+    output: /images/artistes
+    categories: [image]
+    rename: safe
+  - name: videos
+    label: Vidéos
+    input: videos
+    output: /videos
+    categories: [video]
+
+content:
+  - name: site
+    label: Réglages du site
+    type: file
+    path: data/site.json
+    fields:
+      - name: nom
+        label: Nom du festival
+        type: string
+      - name: dates
+        label: Dates
+        type: string
+      - name: lieu
+        label: Lieu
+        type: string
+      - name: logo
+        label: Logo
+        type: image
+        media: images
+
+      - name: couleurs
+        label: Couleurs
+        description: "Codes couleur, ex. #e4572e (voir htmlcolorcodes.com)"
+        type: object
+        fields:
+          - { name: fond, label: Fond, type: string }
+          - { name: texte, label: Texte, type: string }
+          - { name: accent, label: Accent (boutons, liens), type: string }
+          - { name: banniere, label: Bannière (si pas d'image), type: string }
+
+      - name: accueil
+        label: Page d'accueil
+        type: object
+        fields:
+          - { name: banniere, label: Image de la bannière, type: image, media: images }
+          - name: flickr_cle_api
+            label: Clé API Flickr
+            type: string
+            description: "Clé gratuite sur flickr.com/services/apps/create"
+          - name: flickr_album
+            label: Album Flickr
+            type: string
+            description: "Lien de l'album, ex. https://www.flickr.com/photos/nom/albums/7215..."
+          - { name: intervalle, label: Secondes entre deux photos, type: number }
+          - name: video_youtube
+            label: Vidéo YouTube (si pas de Flickr)
+            type: string
+            description: Lien YouTube, prioritaire sur le fichier vidéo
+          - { name: video, label: Fichier vidéo (si pas de Flickr), type: file, media: videos }
+
+      - name: programmation
+        label: Page programmation
+        type: object
+        fields:
+          - { name: titre, label: Titre, type: string }
+          - { name: banniere, label: Image de la bannière, type: image, media: images }
+          - { name: intro, label: Texte d'introduction, type: text }
+
+      - name: reseaux
+        label: Réseaux sociaux
+        type: object
+        fields:
+          - { name: instagram, label: Instagram, type: string }
+          - { name: flickr, label: Flickr, type: string }
+          - { name: facebook, label: Facebook, type: string }
+
+      - name: contacts
+        label: Contacts
+        type: object
+        list: true
+        fields:
+          - { name: label, label: Intitulé, type: string }
+          - { name: email, label: E-mail, type: string }
+
+  - name: artistes
+    label: Artistes
+    type: file
+    path: data/artistes.csv
